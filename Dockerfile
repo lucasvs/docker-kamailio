@@ -3,8 +3,8 @@ MAINTAINER Lucas Souza <lucasvs@outlook.com>
 
 ## Add kamailio repo
 RUN apt-get update && apt-get -y -q install wget
-RUN wget http://deb.kamailio.org/kamailiodebkey.gpg -q -O - | apt-key add -
 ADD kamailio.list /etc/apt/sources.list.d/kamailio.list
+RUN wget http://deb.kamailio.org/kamailiodebkey.gpg -q -O - | apt-key add -
 
 ## install kamailio
 RUN apt-get update && \
