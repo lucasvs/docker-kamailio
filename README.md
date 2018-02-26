@@ -59,15 +59,3 @@ shmem:used_size = 2442528
 	real_used: 480696
 }
 [...]
-```
-
-## Usage tips
-
-The location of, and reloading and listing the kamailio `dispatcher.list`
-
-```
-[user@host log]$ nano /etc/kamailio/dispatcher.list 
-[user@host log]$ kamcmd dispatcher.list
-[user@host log]$ kamcmd dispatcher.reload
-[user@host log]$ kamcmd dispatcher.list
-```
