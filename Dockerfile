@@ -1,8 +1,12 @@
 FROM debian:jessie
 MAINTAINER Lucas Souza <lucasvs@outlook.com>
 
+## Add kamailio repo
 ADD kamailio.list /etc/apt/sources.list.d/kamailio.list
+RUN apt-get update && apt-get -y -q install wget
 RUN wget http://deb.kamailio.org/kamailiodebkey.gpg -q -O - | apt-key add -
+
+## install kamailio
 RUN apt-get update && \
   apt-get install -y --force-yes mysql-client \
   kamailio kamailio-autheph-modules kamailio-java-modules \
@@ -10,7 +14,6 @@ RUN apt-get update && \
   kamailio-utils-modules kamailio-websocket-modules kamailio-xml-modules \
   kamailio-xmpp-modules \
   net-tools \
-  wget \
   rsyslog
 
 ## Install sngrep
