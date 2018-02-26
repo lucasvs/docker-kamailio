@@ -1,2 +1,2 @@
-deb http://deb.kamailio.org/kamailio jessie main
-deb-src http://deb.kamailio.org/kamailio jessie main
+deb     http://deb.kamailio.org/kamailio51 jessie  main
+deb-src http://deb.kamailio.org/kamailio51 jessie  main
