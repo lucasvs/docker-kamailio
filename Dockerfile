@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Lucas Souza <lucasvs@outlook.com>
 
 ADD kamailio.list /etc/apt/sources.list.d/kamailio.list
-RUN wget -O- http://deb.kamailio.org/kamailiodebkey.gpg | sudo apt-key add -
+RUN wget http://deb.kamailio.org/kamailiodebkey.gpg -q -O - | apt-key add -
 RUN apt-get update && \
   apt-get install -y --force-yes mysql-client \
   kamailio kamailio-autheph-modules kamailio-java-modules \
